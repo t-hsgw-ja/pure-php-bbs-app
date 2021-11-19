@@ -1,0 +1,200 @@
+@import "lib";
+/* #####################
+#
+#    Common setting
+#
+##################### */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none; // iPhone style initial
+}
+
+area { border:none;outline:none; }
+
+
+/*-----------*
+ * form
+ *----------*/
+
+// input{ -webkit-appearance: none; }
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"] {
+	padding: 0 4px;
+	margin-top: -2px;
+}
+textarea {
+	padding: 4px;
+}
+
+button {outline: none;}
+label{
+	display: inline-block;
+	cursor:pointer;
+}
+
+::-webkit-input-placeholder{color:#AAA;font-weight: normal !important;}
+:-ms-input-placeholder{color:#AAA;font-weight: normal !important;}
+::-moz-placeholder{color:#AAA;font-weight: normal !important;}
+
+
+/*-----------*
+ * clearfix
+ *----------*/
+
+.cf{*zoom:1}.cf:after{content:"";display:block;clear:both}
+.clear,hr{clear:both}
+
+
+
+/* #####################
+#
+#      Font setting
+#
+##################### */
+
+html {
+	font-size: 10px;
+}
+body {
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+	font-size: 1.5rem;
+	font-feature-settings: "palt";
+	@include tab_pc {
+		font-size: 1.6rem;
+	}
+}
+b, strong, .bold{
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI semibold", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic", "Segoe UI", Verdana, Meiryo, sans-serif;
+}
+
+/* kerning */
+.kerning {font-feature-settings: "palt";}
+
+
+/* #####################
+#
+#    Class setting
+#
+##################### */
+@include sp {
+	.tab_pc{display: none !important;}
+}
+@include tab_sp {
+	.pc{display: none !important;}
+}
+@include tab_pc {
+	.sp{display: none !important;}
+}
+@include pc {
+	.tab_sp{display: none !important;}
+}
+
+/* float */
+.fll{float:left}
+.flr{float:right}
+/* text-align */
+.tal{text-align: left   !important;}
+.tac{text-align: center !important;}
+.tar{text-align: right  !important;}
+
+
+
+/*-------------------------*
+ *    wrapper setting
+ *------------------------*/
+.wrapper {
+	max-width: 500px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	@include tab_pc {
+		max-width: 880px;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+	@include pc {
+		max-width: 1160px;
+		padding-right: 80px;
+		padding-left: 80px;
+	}
+
+	// Fixed layout 固定幅
+	&_type_fixed {
+		@extend .wrapper;
+
+		@include tab_pc {
+			max-width: initial;
+			width: 880px;
+		}
+		@include pc {
+			max-width: initial;
+			width: 1160px;
+		}
+	}
+}
+
+.inner {
+	@extend .wrapper;
+
+	max-width: 400px;
+	@include tab_pc {
+		max-width: 680px;
+	}
+	@include pc {
+		max-width: 9160px;
+	}
+}
+
+
+/*-------------------------*
+ *    layout setting
+ *------------------------*/
+.layout-common {
+	min-height: calc(100vh - 140px);
+}
+
+/*-------------------------*
+ *    Component
+ *------------------------*/
+@import "btn";
+
+.flex {
+	display: flex;
+}
+
+/* #####################
+#
+#    Common style
+#
+##################### */
+
+.header {
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	&__wrapper {
+		height: 70px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 1.8rem;
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+	}
+}
+
+.footer {
+	background-color: #fff;
+	border-top: 1px solid #eee;
+}

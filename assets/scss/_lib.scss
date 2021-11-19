@@ -1,0 +1,39 @@
+/*
+##################################################################
+#################################
+
+	#######  SETTING  #########
+
+#################################
+##################################################################
+*/
+@charset "UTF-8";
+
+
+/* PC,SP width setting */
+@mixin sp {
+	@media all and (max-width: 599px) {
+		@content;
+	}
+}
+@mixin tab_sp {
+	@media all and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin tab_pc {
+	@media all and (min-width: 600px) {
+		@content;
+	}
+}
+@mixin pc {
+	@media all and (min-width: 1025px) {
+		@content;
+	}
+}
+@mixin pc_w {
+	@media all and (min-width: 1440px) {
+		@content;
+	}
+}

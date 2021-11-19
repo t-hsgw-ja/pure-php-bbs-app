@@ -1,0 +1,27 @@
+@import "lib";
+
+.btn {
+	padding: 0 10px;
+	height: 30px;
+	line-height: 28px;
+	display: inline-block;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	background-color: #fff;
+	font-weight: 600;
+	font-size: 1.4rem;
+	color: #333;
+	text-decoration: none;
+	
+	&--green {
+		border: 1px solid #416953;
+		background-color: #f7fffb;
+		color: #416953;
+	}
+
+	&--red {
+		border: 1px solid #694143;
+		background-color: #fff7f8;
+		color: #694143;
+	}
+}

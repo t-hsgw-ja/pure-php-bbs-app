@@ -1,0 +1,45 @@
+@import "lib";
+
+.posts {
+	.post {
+		margin: 3rem 0;
+	}
+}
+
+.post {
+	padding: 1.8rem	4rem;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	list-style-type: none;
+
+	&__title {
+		border-bottom: 1px solid #eee;
+		font-weight: 600;
+		font-size: 2rem;
+	}
+
+	&__content {
+		margin: 1.6rem 0;
+		line-height: 1.6666;
+	}
+
+	&__flex {
+		justify-content: space-between;
+	}
+
+	&__info {
+		align-items: center;
+		* {
+			line-height: 1.3;
+		}
+	}
+	&__author {
+		margin-right: 1rem;
+		font-size: 1.4rem;
+	}
+	&__time {
+		font-size: 1.4rem;
+	}
+
+	&__controller {}
+}
