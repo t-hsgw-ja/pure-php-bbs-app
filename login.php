@@ -4,6 +4,7 @@ if (isset($_POST['submit'])) {
 }
 
 include_once('lib/config.php');
+include_once('lib/Class/DB.php');
 
 $page_slug = 'login';
 ?>
@@ -47,6 +48,15 @@ $page_slug = 'login';
                 </div>
             </form>
         </div>
+
+        <?php
+        $myDB = new DB;
+        // DB接続
+        $myDB->connect();
+        echo '<pre>';
+        $myDB->query();
+        echo '</pre>';
+        ?>
     </main>
 
     <?php include_once('inc/footer.php'); ?>
