@@ -1,0 +1,39 @@
+@import "lib";
+
+.form {
+	&-login {}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea {
+		padding: 3px 8px;
+		border: 1px solid #333;
+		border-radius: 2px;
+	}
+}
+
+.form-row {
+	margin: 1.2rem 0;
+	display: flex;
+
+	& > * {
+		&:first-child {
+			width: 35%;
+		}
+		&:last-child {
+			width: 65%;
+		}
+	}
+
+	input {
+		width: 100%;
+	}
+}
+
+.form-btn {
+	max-width: 240px;
+	width: 100%;
+
+	&__submit {}
+}

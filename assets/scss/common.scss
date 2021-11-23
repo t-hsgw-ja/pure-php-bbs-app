@@ -164,6 +164,13 @@ b, strong, .bold{
  *------------------------*/
 @import "btn";
 
+.box {
+	margin: 3rem 0;
+	padding: 2rem;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+}
+
 .flex {
 	display: flex;
 }
@@ -190,6 +197,16 @@ b, strong, .bold{
 		a {
 			text-decoration: none;
 			color: #000;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		justify-content: flex-end;
+
+		li {
+			margin-left: 1.5rem;
+			list-style-type: none;
 		}
 	}
 }
